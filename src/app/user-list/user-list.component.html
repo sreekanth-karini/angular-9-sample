@@ -1,0 +1,21 @@
+<table width="100%" class="table table-bordered table-hover table-striped">
+	<caption>Users List</caption>
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Mail</th>
+			<th>View</th>
+			<th>Delete</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let u of users;let i = index;">
+			<td>{{u.id}}</td>
+			<td>{{u.name}}</td>
+			<td>{{u.email}}</td>
+			<td><button type="button" class="btn btn-link" [routerLink]="['/user', u.id]">View</button></td>
+			<td><button type="button" class="btn btn-link" (click)="deleteUser(u.id)">Delete</button></td>
+		</tr>
+	</tbody>
+</table>

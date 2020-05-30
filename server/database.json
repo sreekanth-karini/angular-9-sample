@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "name": "Carmella Graham",
+      "email": "Alberto_Wuckert@gmail.com",
+      "phone": "(191) 061-7360 x8680",
+      "city": "Jadamouth",
+      "country": "Egypt",
+      "title": "National Optimization Director"
+    },
+    {
+      "id": 1,
+      "name": "Kayden Hermann",
+      "email": "Lola_OKeefe98@gmail.com",
+      "phone": "1-798-007-8755 x50942",
+      "city": "Steuberchester",
+      "country": "Luxembourg",
+      "title": "Product Assurance Coordinator"
+    },
+    {
+      "id": 3,
+      "name": "Cali Cassin",
+      "email": "Earnestine_Reynolds@yahoo.com",
+      "phone": "195-995-2170 x49176",
+      "city": "Swaniawskiville",
+      "country": "Reunion",
+      "title": "Future Marketing Coordinator"
+    },
+    {
+      "id": 4,
+      "name": "Llewellyn Runte",
+      "email": "Bryana94@yahoo.com",
+      "phone": "777-942-9992 x9194",
+      "city": "Shanahanshire",
+      "country": "France",
+      "title": "Human Creative Supervisor"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+<div class="container">
+
+<!-- Cart Heading -->
+  <h1>Products List ( {{products.length}} Items )</h1>
+
+  <!-- Cart Summary -->
+  <div class="cart-added" *ngIf="productsInCart.length > 0">
+    <!-- Cart Total -->
+    <h3 style="text-align: center;">Your cart summary</h3>
+    
+    <table style="text-align: center;width: 100%;">
+      <tr>
+        <th>Items in cart</th>
+        <th>Total Rs</th>
+      </tr>
+      <tr>
+        <td>{{productsInCart.length}}</td>
+        <td><h2>{{getCartTotal()}}</h2></td>
+      </tr>
+    </table>
+    <hr>
+    <!-- Cart Added items -->
+    <table style="text-align: center;width: 100%;">
+      <tr>
+        <th>Item</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let p of productsInCart;let i = index;">
+        <td>{{p.productName}}</td>
+        <td>{{p.cartCount}}</td>
+        <td>{{p.price * p.cartCount}}</td>
+        <td>
+          <button type="button" (click)="removeCart(p , i)" style="margin: 10px;">
+            Remove
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+      <!-- Products List -->
+    <div class="product" *ngFor="let p of products;let i = index;">
+        
+        <img [src]="p.productImage" height="60" />
+        <h3>{{p.brandName}}</h3>
+        <p>{{p.productName}}</p>
+
+        <br>
+        <p>Rs. <b>{{p.price}}</b></p>
+
+        <button type="button" (click)="addToCart(p)" style="margin: 10px;" *ngIf="p.cartCount <= 0">
+          Add to Cart
+        </button>
+
+        <!-- Cart Adding and removing -->
+        <div *ngIf="p.cartCount > 0">
+           <button type="button" (click)="quantityMinus(p, i)" style="margin: 10px;">
+            -
+          </button>
+          <b>{{p.cartCount}}</b> in cart
+          <button type="button" (click)="quantityPlus(p)" style="margin: 10px;">
+           +
+          </button>
+        </div>
+
+    </div>
+ </div>

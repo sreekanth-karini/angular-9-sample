@@ -1,0 +1,21 @@
+/* Custom CSS */
+  .product {
+      height: 225px;
+      width: 200px;  
+      border: 1px solid grey;
+      text-align: center;
+      margin: 20px;
+      display: inline-block;
+      background-color: aliceblue;
+      padding-top: 8px;
+  }
+
+  .cart-added {
+      height: 330px;
+      width: 600px;
+      border: 2px solid green;
+  }
+
+  .main-cart {
+    max-width: 490px;
+  }
